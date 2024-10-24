@@ -1,0 +1,49 @@
+package testes;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import pages.CadastroDia;
+import pages.CadastroNomeSobrenomePages;
+
+public class CadastroNomeSobrenomeTeste {
+	
+	  static WebDriver driver;
+	  static CadastroNomeSobrenomePages nomeSobrenome;
+	  static CadastroDia dia;
+
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.setProperty("WebDriver.chrome.driver", "C:/chromedriver-win64/chrome.exe");
+		driver = new ChromeDriver();
+		driver.get("https://accounts.google.com/SignUp?hl=pt");
+		driver.manage().window().maximize();
+		nomeSobrenome = new CadastroNomeSobrenomePages(driver);
+		dia = new CadastroDia(driver);
+		}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+	}
+
+	@Test
+	public void test() throws InterruptedException {
+		
+		nomeSobrenome.preencherCampoNome();
+		nomeSobrenome.preencherCampoSobrenome();
+		nomeSobrenome.proximo();
+		Thread.sleep(5000);
+		dia.preencherDia();
+		dia.preencherAno();
+		dia.preencherGenero();
+	}
+
+}

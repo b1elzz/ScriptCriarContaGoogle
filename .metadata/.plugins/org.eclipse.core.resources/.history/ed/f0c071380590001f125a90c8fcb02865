@@ -1,0 +1,23 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class CadastroNomeSobrenomePages {
+	
+	 private static WebDriver driver;
+	 
+	 public CadastroNomeSobrenomePages(WebDriver driver) {
+		 this.driver = driver;
+	 }
+	 
+	 public void preencherCamposNomes() {
+		 WebElement campoNome = driver.findElement(By.name("firstName"));
+		 campoNome.sendKeys("Gabriel");
+		 
+		 WebElement campoSobrenome = driver.findElement(By.name("lastName"));
+		 campoNome.sendKeys("Dias");
+	 }
+	
+}

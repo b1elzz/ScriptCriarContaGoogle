@@ -1,0 +1,33 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class CadastroDia {
+	
+	static WebDriver driver;
+
+	public CadastroDia(WebDriver driver) {
+		this.driver = driver;;
+	}
+	
+	public void preencherDia() {
+		 WebElement dia = driver.findElement(By.name("day"));
+		 dia.sendKeys("10");
+	 }
+	
+	public void preencherAno() {
+		 WebElement ano = driver.findElement(By.id("year"));
+		 ano.sendKeys("1998");
+	 }
+	
+	public void preencherGenero() {
+		WebElement genero = driver.findElement(By.id("gender"));
+		genero.click();
+		genero.click();
+	}
+	
+	
+
+}

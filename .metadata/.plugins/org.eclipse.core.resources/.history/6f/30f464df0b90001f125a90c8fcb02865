@@ -1,0 +1,22 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class CadastroDia {
+	
+	static WebDriver driver;
+
+	public CadastroDia(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public void preencherDia() {
+		 WebElement dia = driver.findElement(By.name("day"));
+		 dia.sendKeys("a");
+	 }
+	
+	
+
+}

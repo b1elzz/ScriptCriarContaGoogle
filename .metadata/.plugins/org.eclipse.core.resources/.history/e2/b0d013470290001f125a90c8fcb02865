@@ -1,0 +1,34 @@
+package testes;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CadastroNomeSobrenomeTeste {
+	
+	 private static WebDriver driver;
+
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.setProperty("WebDriver.chrome.driver", "C:/chromedriver-win64/chrome.exe");
+		driver = new ChromeDriver();
+		driver.get("https://accounts.google.com/lifecycle/steps/signup/name?continue=https://accounts.google.com/&ddm=0&dsh=S1896884550:1729552334449338&flowEntry=SignUp&flowName=GlifWebSignIn&followup=https://accounts.google.com/&ifkv=ARpgrqfKZoIGpRGdPzsFp34_pJXraYXXXiityQylFymr_M2CNivkrZkLqzLK1rDugtw21W90dahm4A&TL=APps6eaVLED-drcitQx7pVu9sYqLIbva1Y-zQzvX-F3fJzhE7SeSxe0gwrKbu8Pp");
+	}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}
